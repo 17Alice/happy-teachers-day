@@ -1,162 +1,201 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>教师节快乐</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    font-family: "Microsoft YaHei", sans-serif;
-    overflow: hidden;
-  }
-  .envelope-wrapper {
-    position: relative;
-    cursor: pointer;
-    animation: float 3s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .envelope {
-    position: relative;
-    width: 320px;
-    height: 220px;
-    background: #e74c3c;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-  }
-  .envelope::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 0;
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
-    border-top: 110px solid #c0392b;
-    border-radius: 8px 8px 0 0;
-    z-index: 3;
-    transition: transform 0.6s ease;
-    transform-origin: top;
-  }
-  .envelope-wrapper.open .envelope::before {
-    transform: rotateX(180deg);
-    z-index: 1;
-  }
-  .letter {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    height: 200px;
-    background: #fff;
-    border-radius: 4px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.8s ease 0.3s;
-    z-index: 2;
-    overflow: hidden;
-  }
-  .envelope-wrapper.open .letter {
-    transform: translateY(-180px);
-    z-index: 4;
-  }
-  .letter h2 {
-    color: #e74c3c;
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 12px;
-  }
-  .letter p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.8;
-    text-align: center;
-  }
-  .letter .heart {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 10px;
-    animation: heartbeat 1.2s ease-in-out infinite;
-  }
-  @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-  }
-  .tip {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #999;
-    font-size: 14px;
-    white-space: nowrap;
-  }
-  .petals {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-  }
-  .petal {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: #ffb6c1;
-    border-radius: 0 100% 0 100%;
-    opacity: 0.7;
-    animation: fall linear infinite;
-  }
-  @keyframes fall {
-    0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.7; }
-    90% { opacity: 0.7; }
-    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-  }
-</style>
-</head>
-<body>
-  <div class="petals" id="petals"></div>
-  <div class="envelope-wrapper" id="envelope" onclick="openEnvelope()">
-    <div class="envelope"></div>
-    <div class="letter">
-      <h2>🌸 教师节快乐 🌸</h2>
-      <p>亲爱的老师：<br>
-      感谢您的辛勤付出，<br>
-      祝您节日快乐，<br>
-      身体健康，万事如意！</p>
-      <div class="heart">❤️</div>
-    </div>
-    <div class="tip">👆 点击信封打开祝福</div>
-  </div>
 
-<script>
-  function openEnvelope() {
-    document.getElementById('envelope').classList.add('open');
-  }
+<!doctype html>
+<html ud-theme-mode="light" data-ud-theme-mode="light">
+  <head>
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta http-equiv="Content-Security-Policy" content="frame-src 'self' *.aiforce.run sf3-scmcdn-cn.feishucdn.com">
+    
+    
+    <link rel="preconnect" href="https://gcnowit1ouiz-app_17dv740091j-1875875387299908.aiforce.run" crossorigin>
+    
 
-  // 飘落的花瓣
-  const petalsContainer = document.getElementById('petals');
-  for (let i = 0; i < 30; i++) {
-    const petal = document.createElement('div');
-    petal.className = 'petal';
-    petal.style.left = Math.random() * 100 + '%';
-    petal.style.animationDuration = (5 + Math.random() * 10) + 's';
-    petal.style.animationDelay = Math.random() * 10 + 's';
-    petal.style.background = ['#ffb6c1', '#ffc0cb', '#ff69b4', '#ffd700'][Math.floor(Math.random() * 4)];
-    petalsContainer.appendChild(petal);
-  }
-</script>
-</body>
+    <link href="https://lf3-static.bytednsdoc.com/obj/eden-cn/ylcylz_fsph_ryhs/ljhwZthlaukjlkulzlp/feisuda/feisuda.svg" rel="shortcut icon">
+    
+    
+
+
+
+
+<meta property="og:type" content="website">
+
+
+<meta name="showNavBar" content="false" lk-config>
+<meta name="showBottomNavBar" content="false" lk-config>
+
+
+<meta name="orientation" content="portrait" lk-config>
+
+
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1c1c" media="(prefers-color-scheme: dark)">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="renderer" content="webkit">
+<meta name="layoutmode" content="standard">
+<meta name="imagemode" content="force">
+<meta name="wap-font-scale" content="no">
+<meta name="format-detection" content="telephone=no">
+
+<meta name="build-version" content="1.0.1.8090">
+<meta name="build-branch" content="release_hotfix_2026-09-10_45">
+<meta name="build-commit" content="23ef72b411d077691eb2ac0aee97018590671f35">
+
+
+
+
+<link rel="preconnect" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static">
+<link rel="dns-prefetch" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static">
+<link rel="preconnect" href="https://lf3-cdn-tos.bytescm.com">
+<link rel="dns-prefetch" href="https://lf3-cdn-tos.bytescm.com">
+
+
+    
+    
+    <link rel="preconnect" href="https://lf3-short.ibytedapm.com" crossorigin>
+    <script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/apaas-base/assets-retry-inline-script/0.1.0/dist/preset.js" crossorigin="anonymous"></script>
+    
+    <script>window.fgValues = {"apaas.aily.feisuda_message_debug":true,"apaas.miaoda.pro_mode":true,"apaas.force.develops.record_trigger":true,"apaas.miaoda.base_auto_sync_v2":true,"apaas.aily.feisuda_openclaw":true,"apaas.miaoda.base_multi_import":true,"apaas.miaoda.sw_enable":true,"apaas.miaoda.sw_prefetch_enable":true,"apaas.miaoda.admin":true,"apaas.force.develops.webhook_trigger":true,"apaas.aily.feisuda_openclaw_settings":true,"apaas.miaoda.admin_app_management":true,"apaas.aily.feisuda_openclaw_multi_agent":true,"apaas.miaoda.multi_agents":true,"apaas.miaoda.enable_claw_data_pane":true,"apaas.force.develops.approval_status_change_trigger":true,"apaas.miaoda.custom_domain":true,"apaas.miaoda.refactor_artifact":true,"apaas.miaoda.proxy_enable":true,"apaas.miaoda.openclaw_preview_domain_switch":true,"apaas.miaoda.creative_mode":true,"apaas.miaoda.sql_multi_result_v3":true,"lark.apaas.miaoda.inspiration_to_jspage":true,"apaas.miaoda.integration_panel":true,"apaas.aily.miaoda.use_studio_server":true,"apaas.miaoda.comment_word_highlight":true,"apaas.miaoda.creative_to_app":true,"apaas.miaoda.modern_app_upgrade_expert":true,"apaas.miaoda.doubao_html_to_creative":true,"apaas.miaoda.miaoda_openapi":true,"apaas.miaoda.pptx_style_template_import":true,"apaas.miaoda.inspector_engineered_save":true,"apaas.miaoda.pg_mcp_credential":true};</script>
+<script>window.hitInfo = null;</script>
+
+    
+    <script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/apaas-base/browser-compatibility/0.6.5/dist/index.iife.min.js" crossorigin></script>
+    
+    
+<script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/apaas-base/slardar-sdk/0.0.6/dist/index.min.js" crossorigin></script>
+
+<script>window.user={id:'7582645576148192199',tenantId:'7582645542447303640',_rawIsAnonymous:'false'},window.user.isAnonymous='true'===window.user._rawIsAnonymous,window._BUILD_CONFIG={BUILD_ENV:'ONLINE',BUILD_VERSION:'1.0.1.8090',BUILD_TYPE:'online'},function(){var i=window._BUILD_CONFIG?.BUILD_ENV?.toLowerCase()||(window._BUILD_CONFIG?.BUILD_TYPE?'boe':'dev'),o=null;function e(){if(o)return o;if(!window.LBPEBrowserCompatibility)return console.warn('[BrowserCompatibility] SDK not loaded, script may have failed to load'),null;try{return o=window.LBPEBrowserCompatibility.checkBrowserCompatibility()}catch(i){return console.error('[BrowserCompatibility] Check failed:',i),null}}!function(){var o=e();if(o&&!o.isCompatible)try{window.LBPEBrowserCompatibility.redirectIfNotCompatible({query:{slardarBid:'apaas_miaoda',env:i}})}catch(i){console.error('[BrowserCompatibility] Redirect failed:',i)}}();var n=e();n&&(window.__BROWSER_COMPATIBILITY__=n),window.aPaaSSlardarSDK&&'dev'!==i&&'undefined'!==i&&window.aPaaSSlardarSDK.init({initConfig:{bid:'apaas_miaoda',release:window._BUILD_CONFIG?.BUILD_VERSION,env:i,userId:window.user?.id},initContext:{app:'miaoda-creative',windowSize:window.screen?window.screen.width+'*'+window.screen.height:'',devicePixelRatio:window.devicePixelRatio||1,...function(){var i=e();if(!i)return{browser_compat_sdk_loaded:0};var o=i.baseline||{},n=i.os||{},r=i.browser||{},a=i.engine||{},w=i.lark||{};return{browser_compat_sdk_loaded:1,browser:r.name,browser_version:r.version,browser_major_version:r.major,os_name:n.name,os_version:n.version,os_major_version:n.major,browser_engine_name:a.name,browser_engine_version:a.version,browser_engine_major:a.major,is_lark:w.isLark?1:0,lark_version:w.version,lark_major_version:w.major,is_compatible:i.isCompatible?1:0,is_widely:o.widely?1:0,is_newly:o.newly?1:0}}(),hit_info_type:window.hitInfo?.type,hit_info_version:window.hitInfo?.config?.version,hit_info_gray_type:window.hitInfo?.config?.type,hit_info_gray_name:window.hitInfo?.config?.name,hit_info_percent:window.hitInfo?.config?.percent}})}()</script>
+
+
+    
+    <script>window.REACT_APP_UNPKG_CDN_BASE_URL="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg"</script>
+
+    
+<script>var MOBILE_MODE_STORAGE_KEY='miaoda_device_mode';function isIpad(){return/iPad|Tab|Tablet/i.test(navigator.userAgent)&&navigator.maxTouchPoints&&navigator.maxTouchPoints>1}function isMobileBrowser(){return/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i.test(navigator.userAgent)||isIpad()}function isFeishuWebview(){var e=navigator.userAgent.toLowerCase();return/feishu/.test(e)||/lark/.test(e)}function getIsDesktopFormURL(){return window.location.hash.includes('mode=desktop')}function getIsDesktopModeFromSession(){try{return'desktop'===sessionStorage.getItem(MOBILE_MODE_STORAGE_KEY)}catch(e){return!1}}function setSessionStorageMobileMode(e){try{sessionStorage.setItem(MOBILE_MODE_STORAGE_KEY,String(e))}catch(e){}}var isDesktopModeInMobile=isMobileBrowser()&&(getIsDesktopFormURL()||getIsDesktopModeFromSession())</script>
+
+    
+<script>!function(){try{var e='apaas_miaoda_theme_preference_v1',t='miaoda-theme-preference';function n(e){return'system'===e||'dark'===e||'light'===e}function o(){for(var t=document.cookie?document.cookie.split('; '):[],o=0;o<t.length;o++){var a=t[o],r=a.indexOf('='),c=-1===r?a:a.slice(0,r);try{if(decodeURIComponent(c)!==e)continue}catch(e){continue}var u=-1===r?'':a.slice(r+1);try{var d=decodeURIComponent(u);if(n(d))return d}catch(e){}}return null}function a(){var t='Path=/; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';'https:'===location.protocol&&(t+='; Secure'),document.cookie=encodeURIComponent(e)+'=; '+t}function r(){var e=location.hostname;if(!e||'localhost'===e||/^\d{1,3}(\.\d{1,3}){3}$/.test(e))return null;var t=e.split('.');return t.length<3?null:'.'+t.slice(-2).join('.')}function c(t){var n=encodeURIComponent(e),c=encodeURIComponent(t),u='Path=/; Max-Age=31536000; SameSite=Lax';'https:'===location.protocol&&(u+='; Secure');var d=r();return!(!d||(document.cookie=n+'='+c+'; '+u+'; Domain='+d,a(),o()!==t))||(document.cookie=n+'='+c+'; '+u,o()===t)}function u(){try{localStorage.removeItem(t)}catch(e){}}var d=/^\/doubao\/app\//.test(location.pathname),i=/^\/miaoda-kit\//.test(location.pathname),m=d||i;d&&(document.documentElement.dataset.brand='doubao');var l=function(){var e=(location.search||'').match(/[?&]theme=([^&]*)/);if(!e)return null;var t=decodeURIComponent(e[1].replace(/\+/g,' '));return'dark'===t||'light'===t?t:null}();if(l||(l=m?'light':function(){var e=function(){var e=o(),t=r();return e&&t?(a(),o()||(c(e),e)):e}();if(e)return u(),e;var d=function(){try{var e=localStorage.getItem(t);if(!e)return null;var o=JSON.parse(e),a=o&&o.state&&o.state.themePreference;return n(a)?a:null}catch(e){return null}}();return d?(c(d)&&u(),d):null}()),!l)return;if('dark'===l||'system'===l&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.classList.add('dark'),document.documentElement.setAttribute('ud-theme-mode','dark'),document.documentElement.dataset.udThemeMode='dark';var s=d?'#292929':'#1a1a1a';document.documentElement.style.backgroundColor=s,document.documentElement.style.colorScheme='dark',new MutationObserver(function(e,t){document.body&&(document.body.style.backgroundColor=s,t.disconnect())}).observe(document.documentElement,{childList:!0})}}catch(h){}}()</script>
+
+
+<script>!function(){if(isMobileBrowser()){var e=window.location.pathname;if(-1!==['/','/home','/my-apps','/case-center'].indexOf(e)){var t='#f9f9fa';if(document.documentElement.classList.contains('dark'))return;var o=document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]');o&&o.setAttribute('content',t),document.documentElement.style.backgroundColor=t}}}()</script>
+
+    
+<script>!function(){try{function e(){if(isMobileBrowser()&&isDesktopModeInMobile){console.log('[移动端桌面模式适配] 检测到移动端设备但预览模式为 desktop，强制设置宽度为 1200px');var e=document.createElement('style');e.textContent=' .w-screen { width: 1200px !important; } body, html { width: 1200px !important; } ',document.head.appendChild(e)}}isDesktopModeInMobile&&setSessionStorageMobileMode('desktop'),'loading'===document.readyState?document.addEventListener('DOMContentLoaded',e):e()}catch(t){console.error('[移动端桌面模式适配] 执行失败:',t)}}()</script>
+
+    
+<script>!function(){try{isFeishuWebview()&&!isDesktopModeInMobile&&(console.log('[Feishu Debug] 检测到飞书环境，注入安全区域调试代码'),o={src:'https://lf1-cdn-tos.bytegoofy.com/goofy/lark/op/h5-js-sdk-1.5.44.js',onLoad:function(){console.log('[Mobile Feishu Debug] 飞书 JSSDK 加载完成')},onError:function(){console.error('[Mobile Feishu Debug] 飞书 JSSDK 加载失败')}},new Promise(function(e,n){var r=document.createElement('script');r.type=o.type||'text/javascript',r.src=o.src,r.async=!1!==o.async,r.onload=function(){o.onLoad&&o.onLoad(),e()},r.onerror=function(e){o.onError&&o.onError(e),n(new Error('Failed to load script: '+o.src))},document.head.appendChild(r)}))}catch(o){console.error('[移动端飞书环境检测和动态注入] 执行失败:',o)}var o}()</script>
+
+    
+<script>!function(n,t){if(n.LogAnalyticsObject=t,!n[t]){function c(){c.q.push(arguments)}c.q=c.q||[],n[t]=c}n[t].l=+new Date}(window,'collectEvent')</script>
+
+<script async src="https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js" crossorigin></script>
+
+
+<script async data-app-name="miaoda" data-slardar-sdk-name="KSlardarWeb" src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/byted/performance/0.2.3/dist/memory.iife.js" crossorigin></script>
+
+    
+<script>var PerformanceReport=function(e){"use strict";var t=Object.defineProperty,n=(e,n,r)=>(((e,n,r)=>{n in e?t(e,n,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[n]=r})(e,"symbol"!=typeof n?n+"":n,r),r);const r="builderV3-custom-TTI",i=(e,t)=>{try{window.performance[isNaN(t.start)?"mark":"measure"](e,t)}catch(e){console.error(e)}},s={hasHook:!1,ingReqSize:0,listeners:[],isIgnoreRequest:e=>{let t;return t=e instanceof Request?e.url:e instanceof URL?e.href:e,"string"==typeof t&&t.indexOf(".zijieapi.com")>-1},runListeners(){this.listeners.forEach(e=>e(this.ingReqSize))},hook(e){var t,n;if(this.hasHook)return;this.hasHook=!0;const r=this,s=`__tti_${Math.random()}`;if(window.fetch&&null!=(n=null==(t=window.Response)?void 0:t.prototype)&&n.blob){const t=window.fetch;window.fetch=function(n){if(r.isIgnoreRequest(n))return t.apply(window,arguments);let s,o;return e&&r.listeners.length&&(s=performance.now(),o=`Fetch: ${"string"==typeof n?n:n.url}`),r.ingReqSize++,r.runListeners(),t.apply(window,arguments).then(e=>{try{e.clone().blob().then(()=>{r.ingReqSize--,r.runListeners(),o&&r.listeners.length&&i(o,{start:s})})}catch{}return e},e=>{try{r.ingReqSize--,r.runListeners(),o&&r.listeners.length&&i(o,{start:s})}catch{}throw e})}}const o=XMLHttpRequest.prototype.open,a=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(e,t){o.apply(this,arguments);try{if(r.isIgnoreRequest(t))return;t=t instanceof window.URL?t.href:t,r.listeners.length&&(this[s]={url:t,start:performance.now()})}catch{}},XMLHttpRequest.prototype.send=function(){a.apply(this,arguments),this[s]&&(r.ingReqSize++,r.runListeners(),this.addEventListener("loadend",()=>{r.ingReqSize--,r.runListeners(),this[s]&&e&&(r.listeners.length&&i(`XHR: ${this[s].url}`,{start:this[s].start}),delete this[s])}))}},addEventListener(e,t){this.hook(t),this.listeners.push(e)},removeEventListener(e){this.listeners=this.listeners.filter(t=>t!==e)}};class o{constructor(e,t){n(this,"ingResourceSize",0),n(this,"debug"),n(this,"observer"),n(this,"end",!1),n(this,"done",!0),this.debug=t.debug,this.observer=()=>{e&&e(s.ingReqSize+this.ingResourceSize<1)}}observe(e){if(e){let t,n;this.debug&&!this.end&&(t=`Assets: ${e.getAttribute("src")||e.getAttribute("href")}`,n=performance.now()),this.ingResourceSize++,this.observer();const r=()=>{this.ingResourceSize--,this.observer(),t&&!this.end&&i(t,{start:n})};return e.addEventListener("load",r),void e.addEventListener("error",r)}return s.addEventListener(this.observer,this.debug),this}disconnect(){this.end=!0,s.removeEventListener(this.observer)}}class a{constructor(e){n(this,"inputTypes",["click","keypress","wheel"]),n(this,"handler"),this.handler=e}observe(){this.inputTypes.forEach(e=>{window.addEventListener(e,this.handler,!0)})}disconnect(){this.inputTypes.forEach(e=>{window.removeEventListener(e,this.handler,!0)})}}class c{constructor(e){n(this,"handler"),this.handler=e}observe(){window.addEventListener("visibilitychange",this.handler)}disconnect(){window.removeEventListener("visibilitychange",this.handler)}}function d(e,t={debug:location.search.includes("_perf_debug")}){var n;if(!window.PerformanceLongTaskTiming||!window.MutationObserver||null==(n=window.performance)||!n.now)return{abort:()=>{}};const s=t.debug;let d,l,h,u,w,v,f,p,m,b="complete"===document.readyState,g=t.start;function y(e,t="log"){s&&console[t]("[custom-tii]",e)}const L=e=>{l&&clearTimeout(l),l=null,[h,u,w,v,f,m,p].forEach(e=>{var t;return null==(t=null==e?void 0:e.disconnect)?void 0:t.call(e)}),0===g&&window.removeEventListener("load",R),e&&s&&y("采集结束，原因："+e)},E=()=>{clearTimeout(l),l=window.setTimeout(()=>{if(b&&null!=v&&v.done&&(!m||m.done)){const t=performance.now(),n=(d||t)-g;L(`采集完成：${n}ms`);const o={start:g,duration:n};e&&e(o),window.dispatchEvent(new CustomEvent(r,{detail:{time:n}})),((e,t,n)=>{var r;null==(r=window.aPaaSSlardarSDK)||null==(r=r.instance)||r.call(window,"sendEvent",{name:e,metrics:t,categories:{...n},level:"info",type:"event"})})(r,{time:n},{loading_type:0===g?"init":"history"}),s&&(i("custom-tti end",{startTime:t}),i("custom-tti",o))}},100)},R=()=>{v=new o(e=>{v.done=e,E()},{debug:s}),v.observe(),h=new MutationObserver(e=>{d=performance.now(),null==e||e.forEach(e=>{var t;"childList"===e.type&&(null==(t=e.addedNodes)||t.forEach(e=>{("SCRIPT"===e.tagName&&e.src||"LINK"===e.tagName&&"stylesheet"===e.rel&&e.href)&&(null==v||v.observe(e))}))})}),h.observe(document.documentElement,{attributes:!0,childList:!0,subtree:!0,characterData:!0}),window.LayoutShiftAttribution&&(u=new PerformanceObserver(e=>{d=performance.now();const t=e.getEntries();E(),s&&t.forEach(e=>{i("LayoutShift",{startTime:e.startTime}),i("LayoutShift trigger time",{startTime:performance.now()})})}),u.observe({entryTypes:["layout-shift"]})),w=new PerformanceObserver(e=>{E(),s&&e.getEntries().forEach(e=>{i("LongTask",{start:e.startTime,duration:e.duration})})}),w.observe({entryTypes:["longtask"]}),t.observer&&(m=new t.observer(e=>{m.done=e,E()},{debug:s}),m.observe()),f=new a(()=>{L("用户输入")}),f.observe(),p=new c(()=>{document.hidden&&L("用户离开页面")}),p.observe(),b?(isNaN(g)&&(g=performance.now()),E()):(isNaN(g)&&(g=0),window.addEventListener("load",()=>{b=!0,E()}))};return y("开始检测"),R(),{abort:function(){L("主动中止")}}}return d(),e.monitorCustomTII=d,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),e}({})</script>
+
+
+    
+    
+<script>!function(){var n,i;window.__policySdkReady=new Promise(function(e,a){n=e,i=a}),window.__policySdkReady.catch(function(){});var e=document.createElement('script');e.src="https://lf-scm-cn.feishucdn.com/lmp/scs/policy-sdk-6.2.14.js",e.crossOrigin='anonymous',e.onload=function(){try{var i=window.__builtin_policy_sdk__;if(!i||!i.default)return;var e=(location.hostname||'').toLowerCase();if(/\.doubao\.com$/.test(e))return;var a,o={id:'id-ID',de:'de-DE',en:'en-US',es:'es-ES',fr:'fr-FR',it:'it-IT',ja:'ja-JP',ko:'ko-KR',pt:'pt-BR',ru:'ru-RU',th:'th-TH',vi:'vi-VN',zh:'zh-CN','zh-CN':'zh-CN','zh-HK':'zh-HK','zh-TW':'zh-TW'},r=window.user||window.User||{},c=r.language||navigator.language||'en',t=o[c]||o[c.slice(0,2)]||'en-US';a=-1!==e.indexOf('larkoffice')?'internal-api-lark-api.larkoffice.com':-1!==e.indexOf('feishu-boe')?'internal-api-lark-api.feishu-boe.cn':-1!==e.indexOf('feishu-pre')?'internal-api-lark-api.feishu-pre.cn':'internal-api-lark-api.feishu.cn',i.default.init({baseDomain:a,settingDomain:a,passportId:2,language:t,region:'cn',userId:r.id,tenantId:r.tenantId,modules:{larkGateway:!0}})}catch(n){window.console&&console.warn&&console.warn('[policy-sdk cdn init failed]',n)}finally{n()}},e.onerror=function(){window.console&&console.warn&&console.warn('[policy-sdk cdn script load failed]',e.src),i(new Error('policy-sdk cdn script load failed: '+e.src))},document.head.appendChild(e)}()</script>
+
+
+    
+    <title>专属教师祝福H5</title>
+
+    
+    <style>
+      @layer permission-vendor, theme, base, components, utilities;
+    </style>
+
+    
+    <link rel="stylesheet" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/3961.cb0fc4d4c2f4557f.css">
+    
+    <link rel="stylesheet" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/main.9f3f342e280e67e7.css">
+    
+
+    
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/lib-biz-react-async-shared.4b7d4b40599115de.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/lib-lodash-async-shared.918162d20e337aba.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/8336.697f37b0daafd072.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/7677.36712b981ff79640.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/9982.db4435b95c9c4794.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/364.a9c9b305bf44e2dd.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/6242.b12be5783f121c47.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/4394.91fa8402b700f0dd.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/7720.1a7dc936ea6f766f.js" crossorigin="anonymous">
+    
+    <link rel="preload" as="script" href="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/274.38ef3fe2828b9db6.js" crossorigin="anonymous">
+    
+
+    <script src="https://sf3-scmcdn-cn.feishucdn.com/obj/unpkg/apaas-base/polyfill/0.3.0/dist/index.compatible.js" crossorigin="anonymous"></script>
+
+    
+    <script defer="defer" src="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/lib-react.f477c60f7b6c6571.js" crossorigin="anonymous"></script>
+    
+    <script defer="defer" src="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/lib-tanstack-router.58afdebbb95cdf62.js" crossorigin="anonymous"></script>
+    
+    <script defer="defer" src="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/3961.7cf205aa743c259b.js" crossorigin="anonymous"></script>
+    
+    <script defer="defer" src="https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/main.bd203d4f92465e24.js" crossorigin="anonymous"></script>
+    
+
+    
+    <script>
+      window._VSCODE_REMOTE_AUTHORITY = 'ws.aiforce.run';
+      window.ccmConfig = {"frontier":{"aid":1191,"appKey":"5a4d135f57bfbf0461ad10cc7f1d3658","fpid":54,"domain":["ccm-frontier.feishu.cn"]},"drive_api":["internal-api-drive-stream.feishu.cn"]};
+    </script>
+
+    
+<script>window.miaodaFrontierOptions = {"aid":917804,"appKey":"f3c7ec9fb1fa1d311bec12be8696f7e1","fpid":493,"salt":"f8a69f1719916z","urlPath":"wss://msg-frontier.feishu.cn"};</script>
+
+    
+<script>window.miaodaSceneChips = 0;</script>
+
+    
+<script>window.reportUrl="https://tns.feishu.cn/cust/lark_report/?type=common&params=%7B%22scene%22%3A%22miaoda_app_report%22%2C%22entity_id%22%3A%22app_17dv740091j%22%2C%22entity_type%22%3A%22miaoda_app%22%2C%22extra%22%3A%22%22%7D&lang=zh-CN"</script>
+
+
+
+    
+    <script>!function(){var e=document.title||'',p=e;try{p=JSON.parse('"'+e+'"')}catch(e){}p!==e&&(document.title=p);var a={appID:'app_17dv740091j',appType:parseInt('7',10),archType:parseInt('0',10),previewUrl:'https://gcnowit1ouiz-app_17dv740091j-1875875387299908.aiforce.run/app/app_17dv740091j',ssoToken:'',title:p||void 0,permission:JSON.parse('{"view":true,"edit":true,"comment":true,"download":true}'),hasPublished:JSON.parse('true'),sandboxPolicy:'allow-scripts allow-same-origin'};isNaN(a.appType)||isNaN(a.archType)||(window.creativeApp=a)}()</script>
+
+  </head>
+  <body>
+    
+    
+<script>!function(){try{var e=location.pathname.match(/\/page\/([^/?#]+)/);if(!e)return;var n=decodeURIComponent(e[1]),t=window.location.origin,o={},i=Date.now(),r=window.creativeApp&&window.creativeApp.appID||'';function a(e,n){var t=new AbortController,o=setTimeout(function(){t.abort()},1e3);return fetch(e,Object.assign({},n,{signal:t.signal})).then(function(e){if(!e.ok)throw new Error('creative prefetch HTTP error');return e}).finally(function(){clearTimeout(o)})}var c=window.creativeApp&&window.creativeApp.ssoToken||'';(!c||c.indexOf('{')>=0)&&(o.ssoToken={appID:r,ccmToken:n,issuedAt:i,promise:a(t+'/play/api/v1/account/preview_sso_token',{method:'GET',credentials:'include',priority:'high'}).then(function(e){return e.json()}).then(function(e){if(!e)return'';if(null!=e.code&&'0'!==String(e.code))return'';if(null!=e.status_code&&'0'!==String(e.status_code))return'';var n=e.data&&e.data.token;return'string'==typeof n&&n?n:''}).catch(function(){return''})});var s=/(?:^|;\s*)_csrf_token=([^;]+)/.exec(document.cookie),p=s&&s[1]?decodeURIComponent(s[1]):'',u={'Content-Type':'application/json'};p&&(u['X-CSRFToken']=p),o.permission={appID:r,ccmToken:n,issuedAt:i,promise:a(t+'/space/api/suite/permission/document/actions/state/',{method:'POST',credentials:'include',headers:u,body:JSON.stringify({token:n,type:113,actions:['view','edit','comment','download','manage_meta','manage_collaborator','manage_single_page_collaborator','modify_secret_level']}),priority:'high'}).then(function(e){return e.json()}).catch(function(){return null})},r&&(o.appInfo={appID:r,ccmToken:n,issuedAt:i,promise:a(t+'/af/api/v1/studio/app/'+encodeURIComponent(r),{method:'GET',credentials:'include',priority:'high'}).then(function(e){return e.json()}).catch(function(){return null})}),window.__creativePrefetch=o}catch(d){}}()</script>
+
+
+    
+    
+<script>!function(){try{if(!/^\/doubao\/app\//.test(location.pathname))return;var o=window.parent!==window,e=o?'embedded':/aiforce/.test(location.hostname)?'top_aiforce':/feishu/.test(location.hostname)?'top_feishu':'top_other';window.__doubaoChainScene=e;var n='1'===new URLSearchParams(location.search).get('prewarm'),t=Date.now(),a=t.toString(36)+'-'+Math.random().toString(36).slice(2,10),i={},r='',d=null;function u(o,t){try{var d='page_usable'===o||'fail'===o||'abandon'===o;if(r||i[o])return;i[o]=!0,d&&(r=o);var u={stage:o,scene:e,chain_id:a,is_prewarm:n?'1':'0'},s={};if(t)for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&('dwell_ms'===c&&'number'==typeof t[c]?s[c]=t[c]:t[c]&&(u[c]=t[c]));var p={name:'doubao_chain',categories:u};Object.keys(s).length&&(p.metrics=s);var w=window.aPaaSSlardarSDK;w&&w.instance&&w.instance('sendEvent',p)}catch(o){}}function s(){u('abandon',{dwell_ms:Math.max(0,Date.now()-t)})}window.__doubaoChainReport=u,window.addEventListener('pagehide',s),document.addEventListener&&document.addEventListener('visibilitychange',function(){'hidden'===document.visibilityState?d||(d=setTimeout(s,3e4)):d&&(clearTimeout(d),d=null)}),u('entry');var c,p='miaoda-kit:',w=['https://www.doubao.com','chrome://doubao-chat','doubao://doubao-chat','chrome://doubaowork-chat','doubaowork://doubaowork-chat'],f=['fileOperate','dependencyRestore','devServer','preview'],h=(location.pathname.match(/^\/doubao\/app\/([^/?#]+)/)||[])[1]||'',b=/\.doubao\.com$/.test(location.hostname)?'https://miaoda.feishu.cn':'',m=b?'omit':'same-origin',l=!1,v=!1,_=!1,y=!1,k=!1,g=null;function T(){return g?{Authorization:g.Authorization,Dpop:g.Dpop}:{}}function S(){void 0!==c&&clearTimeout(c),c=setTimeout(function(){window.__doubaoPreviewSsoTokenPromise=void 0},27e4)}function z(){try{return'function'==typeof window.__miaodaIsArtifactPreviewApp&&window.__miaodaIsArtifactPreviewApp()&&!(!window.appInfo||!window.appInfo.ssoToken)}catch(o){return!1}}function P(){if(!l){l=!0;try{window.__doubaoPreviewSsoTokenPromise=fetch(b+"/play/api/v1/account/preview_sso_token",{method:'GET',headers:T(),credentials:m}).then(function(o){return o.json()}).then(function(o){return o&&(o.token||o.data&&o.data.token)||''}).catch(function(){return''}),S()}catch(o){}}}function R(o){window.__doubaoPreviewSsoTokenPromise=Promise.resolve(o),S(),y=!0}function I(o){if(!o||'object'!=typeof o)return null;var e=o.data&&'object'==typeof o.data?o.data:o;return e&&'object'==typeof e?{bizStatus:e.bizStatus,previewURL:e.previewURL,clawToken:e.clawToken,sandboxType:e.sandboxType,sandboxId:'number'==typeof e.sandboxID?e.sandboxID:void 0,isFrozen:e.isFrozen,frozenReason:e.frozenReason}:null}function x(o){if(!o||!o.bizStatus)return!1;for(var e=0;e<f.length;e++){var n=o.bizStatus[f[e]];if(!n||'ready'!==n.status)return!1}return!0}function O(o){var e,n=window.__doubaoSandboxBindResult;window.__doubaoSandboxBindResult={appId:h,result:o,consumed:!(!n||!n.consumed)},o&&o.previewURL&&(e=o.previewURL,'function'==typeof window.__miaodaPreheatPreviewOrigin&&window.__miaodaPreheatPreviewOrigin(e))}function A(){var o=window.__doubaoSandboxBindResult;return!(!o||!o.consumed)}function D(o){if(!v&&h){v=!0;var e,n,t,a,i=I(o);if(!i||(O(i),!x(i)))e=i?i.sandboxId:void 0,n=b+"/af/api/v1/studio/app/"+encodeURIComponent(h)+'/instance/get_or_bind',t='number'==typeof e?e:void 0,a=0,function o(){a++;var e=void 0!==t?n+'?sandboxID='+encodeURIComponent(t):n+'?branch='+encodeURIComponent("sprint/default");fetch(e,{method:'GET',headers:T(),credentials:m}).then(function(o){return o.json()}).then(function(e){var n=I(e);n&&(O(n),'number'==typeof n.sandboxId&&(t=n.sandboxId));var i=n&&x(n);A()||i||a>=120||setTimeout(o,1e3)}).catch(function(){A()||a>=120||setTimeout(o,1e3)})}()}}if(o){window.addEventListener('message',function(o){if(-1!==w.indexOf(o.origin)&&o.source===window.parent){var e=o&&o.data;if(e&&'object'==typeof e&&'string'==typeof e.type&&e.type.slice(0,11)===p&&'host:updateToken'===e.type.slice(11)){var n=e.payload;if(n&&n.authorization&&n.dpop){var t=n.prewarm||null;if(g={Authorization:n.authorization,Dpop:n.dpop},window.__doubaoEarlyAuth&&(window.__doubaoEarlyAuth={authorization:n.authorization,dpop:n.dpop}),!_){_=!0,u('auth_ready'),window.__doubaoEarlyAuth={authorization:n.authorization,dpop:n.dpop};var a=t&&t.ssoToken&&t.ssoToken.token;return z()?y=!0:a?R(a):P(),t&&t.getOrBind&&(k=!0),void D(t&&t.getOrBind)}if(t&&(!y&&t.ssoToken&&t.ssoToken.token&&R(t.ssoToken.token),!k&&t.getOrBind)){k=!0;var i=I(t.getOrBind);i&&O(i)}}}}});try{window.parent.postMessage({type:p+'sdk:bootReady',timestamp:Date.now(),payload:{}},'*')}catch(E){}}else u('auth_ready'),z()||P(),D(null)}catch(L){}}()</script>
+
+
+    
+    
+
+<script>!function(){try{if(!/^\/doubao\/app\//.test(location.pathname))return;var a=function(){var a=(location.search||'').match(/[?&]theme=([^&]*)/);if(!a)return null;var t=decodeURIComponent(a[1].replace(/\+/g,' '));return'dark'===t||'light'===t?t:null}(),t=a?'dark'===a:document.documentElement.classList.contains('dark'),e={illustrationWidth:401,illustrationHeight:300,gapPx:24,textFontSizePx:16,textLineHeightPx:24,background:{cssVar:'--card',light:'#fff',dark:'#292929'},textColor:{cssVar:'--subtle-foreground',light:'#646a73',dark:'#bbbfc4'},skeleton:{cssVar:'--accent',light:'#f2f3f5',dark:'#373737'}};function i(a){return t?a.dark:a.light}var n=i(e.background),o=i(e.textColor);var d=function(){try{var a=new URLSearchParams(location.search).get('locale');if('en'===a)return!0;if('zh'===a)return!1;var t=0===(navigator.language||'').toLowerCase().indexOf('en');if(/lark/i.test(navigator.userAgent||''))return t;var e='';try{e=localStorage.getItem('USER_LOCAL_LANGUAGE_CODE')||''}catch(a){}return'2052'!==e&&('1033'===e||t)}catch(a){return!1}}()?'Loading resources...':'资源加载中...',s=t?["https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-1.dark.1e915fa8.svg","https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-2.dark.708f0c80.svg","https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-3.dark.9d83e8de.svg","https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-4.dark.69204dc6.svg"]:["https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-1.light.f9ed7f4c.svg","https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-2.light.fdec8ced.svg","https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-3.light.b58da71d.svg","https://sf3-scmcdn-cn.feishucdn.com/obj/feishu-static/apaas/ai/miaoda/static/doubao-loading/animate-4.light.32fc5e77.svg"],r=Math.floor(Math.random()*s.length),c=document.createElement('div');c.id='miaoda-global-loading',c.style.cssText="position:fixed;inset:0;z-index:2147483600;display:flex;flex-direction:column;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);align-items:center;justify-content:center;gap:"+e.gapPx+'px;background:'+n+';';var l=document.createElement('div');l.style.cssText='width:'+e.illustrationWidth+"px;max-width:100%;aspect-ratio:"+e.illustrationWidth+'/'+e.illustrationHeight+';position:relative;';var u=document.createElement('style');u.textContent='@keyframes miaoda-gl-pulse{50%{opacity:.5}}',document.head.appendChild(u);var m=document.createElement('div');m.style.cssText="display:none;position:absolute;inset:0;border-radius:var(--radius-md,6px);background:var("+e.skeleton.cssVar+','+i(e.skeleton)+");animation:miaoda-gl-pulse 2s cubic-bezier(.4,0,.6,1) infinite;",l.appendChild(m);var g=0,p=setTimeout(function(){m.style.display='block',g=Date.now()},200),f=document.createElement('div');f.style.cssText='font-size:'+e.textFontSizePx+'px;line-height:'+e.textLineHeightPx+"px;font-weight:400;color:"+o+';opacity:0;transition:opacity .2s ease;',f.textContent=d,c.appendChild(l),c.appendChild(f);var h=function(){(document.body||document.documentElement).appendChild(c)};document.body?h():document.addEventListener('DOMContentLoaded',h);var v=function(){f.style.opacity='1'};setTimeout(v,3e3);var x=document.createElement('img');x.src=s[r],x.alt='',x.style.cssText='display:block;width:100%;height:100%;',l.appendChild(x),x.addEventListener('load',function(){clearTimeout(p);var a=function(){m.style.display='none',v()};if(g){var t=400-(Date.now()-g);t<=0?a():setTimeout(a,t)}else a()},{once:!0});var b={available:!0,setText:function(a){a&&(f.textContent=a)},show:function(){c.style.display='flex'},hide:function(){c.style.display='none',clearTimeout(p)},getFrameIdx:function(){return r}};window.__miaodaGlobalLoading=b,setTimeout(function(){b.hide()},12e4)}catch(y){}}()</script>
+
+
+    <div id="root"></div>
+
+  </body>
 </html>
